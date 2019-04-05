@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block style %}
+<meta name="description" content="Technical Fest of Iert Allahabad">
+<meta name="keywords" content="IERT,Technovation,technovation2k18,iert allahabad,technical fest,aktu fest,aktu zonal fest,aktu,allahabad,selfievation,selfivation,tech fest,technovation2k18.org,technovation.org,2k18technovation,2k18,Mega event">
+<link rel="icon" href="images/favicon.jpg" type="image/gif">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  {% load static %}
+  <link rel="stylesheet" href="{% static 'account/css/bootstrap.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/font-awesome.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/font-awesome.min.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/hover-effect.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/main.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/styles.css'%}" type="text/css">
+  <link rel="stylesheet" href="{% static 'account/css/base.css'%}" type="text/css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" >
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link rel="stylesheet" href="css/hover-effect.css">
+
+ <style>
+   table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding: 5px;
+  text-align: left;
+}
+ </style>
+ {% endblock %}
+
+{% block login %}
+<nav class="navbar navbar-expand-md bg-dark  navbar-dark fixed-top ">
+<a class="navbar-brand mr-auto " href="index.html" style="margin-left: 20px;" ><img src="images/logo.png" width="50" height="40px;"></a>
+<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  >
+  <span class="navbar-toggler-icon  "></span>
+</button>
+
+<div class="collapse navbar-collapse" id="navbarSupportedContent">
+  <ul class="navbar-nav ml-auto">
+    <!--
+    <li class="nav-item ">
+      <a class="nav-link" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+    </li>-->
+    <!--
+      <li class="nav-item    ">
+          <a class="nav-link " href="{% url 'event' %}"> EVENT </a></li>-->
+      <li class="nav-item   "><a class="nav-link " href="{% url 'dashboard' %}"> YOUR DASHBOARD  </a></li>
+      <li class="nav-item   "><a class="nav-link " href="{% url 'logout' %}"> LOGOUT  </a></li>
+
+          <li class="nav-item   "><a class="nav-link  " href="sponsor.html"> SPONSOR  </a></li>
+
+          <li class="nav-item   "><a class="nav-link  " href="gallery.html"> GALLERY </a></li>
+  </ul>
+</div>
+</nav>
+
+{% endblock %}
+
+
+
+
+
+
+
+{% block content %}
+<div class="container">
+  <h1>YOUR PROFILE</h1>
+  <table style="width:50%">
+    <tr>
+      <th>USERNAME:</th>
+      <td>{{ username }}</td>
+    </tr>
+
+    <tr>
+      <th>EMAIL:</th>
+      <td>{{ email }}</td>
+    </tr>
+
+    <tr>
+    <th>CONTACT NUMBER:</th>
+    <td>{{ phone }}</td>
+    </tr>
+
+    <tr>
+    <th>COLLEGE:</th>
+    <td>{{ college }}</td>
+    </tr>
+
+    <tr>
+    <th>COLLEGE YEAR:</th>
+    <td>{{ year }}</td>
+    </tr>
+
+    <tr>
+    <th>PAYMENT STATUS:</th>
+    <td>{{ payment_status }}</td>
+    </tr>
+
+    <tr>
+    <th>TECHNICAL EVENTS:</th>
+    {% for e in event_list_technical %}
+      <td>{{ e }}<br></td>
+    {% endfor %}
+    </tr>
+
+    <th>NON-TECHNICAL EVENTS:</th>
+    {% for e in event_list_non_technical %}
+      <td>{{ e }}<br></td>
+    {% endfor %}
+    </tr>
+  </table>
+  </div>
+{% endblock %}

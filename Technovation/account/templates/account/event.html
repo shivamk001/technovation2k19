@@ -1,0 +1,176 @@
+{% extends "base.html" %}
+  <!DOCTYPE html>
+<html  >
+
+<head>
+    <title>Technovation2k18 | Event</title>
+         <meta name="description" content="Technical Fest of Iert Allahabad">
+  <meta name="keywords" content="IERT,Technovation,technovation2k18,iert allahabad,technical fest,aktu fest,aktu zonal fest,aktu,allahabad,selfievation,selfivation,tech fest,technovation2k18.org,technovation.org,2k18technovation,2k18,events,events in technical fest">
+    <link rel="icon" href="images/favicon.jpg" type="image/gif">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+              <link rel="stylesheet" href="css/styles.css">
+          <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" >
+        <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+       <link rel="stylesheet" href="css/hover-effect.css">
+
+
+
+
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112923270-2"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-112923270-2');
+</script>
+</head>
+
+
+<!-- BODY -->
+<body>
+
+
+<!--- LOGIN BLOCK --->
+{% block login %}
+          <nav class="navbar navbar-expand-md bg-dark  navbar-dark fixed-top ">
+ <a class="navbar-brand mr-auto " href="index.html" style="margin-left: 20px;" ><img src="images/logo.png" width="50" height="40px;"></a>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"  >
+    <span class="navbar-toggler-icon  "></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav ml-auto">
+
+      <li class="nav-item ">
+        <a class="nav-link" href="{% url 'home' %}">HOME <span class="sr-only">(current)</span></a>
+      </li>
+      <!--
+        <li class="nav-item  active ">
+            <a class="nav-link " href="event.html"> EVENT </a></li>-->
+        <li class="nav-item   "><a class="nav-link " href="{% url 'login' %}"> LOGIN  </a></li>
+
+            <li class="nav-item   "><a class="nav-link  " href="sponsor.html"> SPONSOR  </a></li>
+
+            <li class="nav-item   "><a class="nav-link  " href="gallery.html"> GALLERY </a></li>
+    </ul>
+  </div>
+</nav>
+{% endblock %}
+
+
+
+        <div style="margin-top:8vh"></div>
+
+         <div class="row">
+
+             <div class="col-xs-12 col-md-4" style="margin-top: 5vh;">
+                <div class="d-flex justify-content-center">
+
+                   <div style=" width: 55vh; height: 35vh;">
+                   <div class="hovereffect">
+
+                     <img class="img-responsive img-fluid  image-height "  style=" border-style: solid; border-width: 2px;border-radius: 10px;" src="images/tech-event.jpg" alt="Technical-events">
+                    <div class="overlay">
+                     <h2>TEST YOUR SKILLS</h2>
+                     <a class="info" href="technical-event.html">FOR MORE CLICK ME</a>
+                   </div>
+                  </div>
+                </div>
+
+                 </div>
+
+                <div class="row justify-content-center" style="margin-top: 1vh"><h4> TECHNICAL EVENTS </h4></div>
+             </div>
+
+
+
+
+             <div class="col-xs-12 col-md-4 "  style="margin-top: 5vh;"  >
+                  <div class="d-flex justify-content-center">
+
+                      <div style=" width: 55vh;height: 35vh;">
+                   <div class="hovereffect">
+
+                     <img class="img-responsive img-fluid   image-height " style=" border-style: solid; border-width: 2px;border-radius: 10px;" src="images/nontech-event.jpg" alt="Nontechnical-events">
+                    <div class="overlay">
+                     <h2>The Fun Begins</h2>
+                     <a class="info" href="nontech-event.html">FOR MORE CLICK ME</a>
+                   </div>
+                  </div>
+                </div>
+
+                  </div>
+                 <div class="row justify-content-center" style="margin-top: 1vh"><h4> NON-TECHNICAL EVENTS </h4></div>
+
+             </div>
+               <div class="col-xs-12 col-md-4 "  style="margin-top: 5vh;"  >
+                  <div class="d-flex justify-content-center">
+
+                      <div style=" width: 55vh;height: 35vh;">
+                   <div class="hovereffect">
+
+                     <img class="img-responsive img-fluid   image-height " style=" border-style: solid; border-width: 2px;border-radius: 10px;" src="images/game-event.jpg" alt="Nontechnical-events">
+                    <div class="overlay">
+                     <h2>Gamers Never Die, They Respawn</h2>
+                     <a class="info" href="game-event.html">FOR MORE CLICK ME</a>
+                   </div>
+                  </div>
+                </div>
+
+                  </div>
+                 <div class="row justify-content-center" style="margin-top: 1vh"><h4>GAMESCOM </h4></div>
+
+             </div>
+
+
+
+         </div>
+
+
+        <div class="row">
+
+
+             <div class="  col-md-12 col-xs-12"  style="margin-top: 3vh;"  >
+                <!--  <div class="d-flex justify-content-center">
+
+                      <a class="" href="####"><img class=" img-fluid img-thumbnail image-height-mega"   src="images/mega-event-1.jpg" alt="Nontechnical-events"  ></a>
+
+                  </div> -->
+                 <div class="d-flex justify-content-center ">
+                 <div style=" width: 88vh;">
+                   <div class="hovereffect">
+
+                     <img class="img-responsive img-fluid    image-height-mega"  style=" border-style: solid; border-width: 2px;border-radius: 10px;" src="images/mega-event-1.jpg" alt="Nontechnical-events">
+                    <div class="overlay">
+                     <h2>The Most Coveted Event of Technovation</h2>
+                     <a class="info" href="mega-event.html">FOR MORE CLICK ME</a>
+                   </div>
+                  </div>
+                </div>
+                </div>
+
+                 <div class="d-flex justify-content-center" style="margin-top: 1vh"><h4> MEGA EVENT </h4></div>
+
+             </div>
+
+        </div>
+
+
+
+
+
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</body>

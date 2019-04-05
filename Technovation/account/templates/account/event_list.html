@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}EVENT LIST{% endblock %}
+{% block content %}
+<div class="container">
+<h1>EVENT LIST:</h1>
+  {% if event_list %}
+<ul>
+    {% for event in event_list %}
+    <li><a href=""><strong>{{ event.event_name }}</a>    {{ event.event_type }}    {{  event.summary }}</strong></li>
+    {% endfor %}
+</ul>
+  {% else %}
+    <p>No events.</p>
+  {% endif %}
+</div>
+{% endblock %}
