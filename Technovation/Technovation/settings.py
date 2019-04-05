@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'social_django',
+    #'social_django',
 ]
 
 MIDDLEWARE = [
@@ -131,20 +131,23 @@ LOGOUT_URL = 'logout'
 
 
 #EMAIL_BACKEND =
+'''
 EMAIL_HOST = 'smtp.sendgrid.net'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 EMAIL_HOST_USER = 'contact.technovation@gmail.com'
 EMAIL_HOST_PASSWORD = 'techno@123'
+'''
 
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'account.authentication.EmailAuthBackend',
-    'social_core.backends.facebook.FacebookOAuth2',
-    'social_core.backends.twitter.TwitterOAuth',
-    'social_core.backends.google.GoogleOAuth2',
+    #'social_core.backends.facebook.FacebookOAuth2',
+    #'social_core.backends.twitter.TwitterOAuth',
+    #'social_core.backends.google.GoogleOAuth2',
 ]
 
+'''
 # social auth settings
 SOCIAL_AUTH_FACEBOOK_KEY = '' # Facebook App ID
 SOCIAL_AUTH_FACEBOOK_SECRET = '' # Facebook App Secret
@@ -155,3 +158,4 @@ SOCIAL_AUTH_TWITTER_SECRET = '' # Twitter Consumer Secret
 
 SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = '' # Google Consumer Key
 SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = '' # Google Consumer Secret
+'''
